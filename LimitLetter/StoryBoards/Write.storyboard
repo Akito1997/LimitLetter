@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Write View Controller-->
+        <scene sceneID="8RL-Q1-HR1">
+            <objects>
+                <viewController storyboardIdentifier="WriteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vDq-gV-dEY" customClass="WriteViewController" customModule="LimitLetter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W8Z-tN-edQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cce-GW-Ef1">
+                                <rect key="frame" x="0.0" y="92" width="414" height="804"/>
+                                <color key="backgroundColor" red="0.99763482809066772" green="0.91770143451035791" blue="0.72383665338129932" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="残り文字数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfB-bR-XTW">
+                                <rect key="frame" x="168.66666666666666" y="59" width="77" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CP-5C-SFN">
+                                <rect key="frame" x="359" y="10" width="30" height="30"/>
+                                <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="send:" destination="vDq-gV-dEY" eventType="touchUpInside" id="YeY-g3-Z0W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPc-sB-gZx">
+                                <rect key="frame" x="25" y="15" width="20" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="batu_30"/>
+                                <connections>
+                                    <action selector="tappedBack:" destination="vDq-gV-dEY" eventType="touchUpInside" id="o3L-T6-zAL"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="200" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="gwf-to-Yha">
+                                <rect key="frame" x="80" y="84" width="254" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="txN-sr-EL9"/>
+                                </constraints>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A1f-xd-7ea"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0CP-5C-SFN" firstAttribute="top" secondItem="W8Z-tN-edQ" secondAttribute="top" constant="10" id="3Ee-Es-JDT"/>
+                            <constraint firstItem="cfB-bR-XTW" firstAttribute="centerX" secondItem="W8Z-tN-edQ" secondAttribute="centerX" id="AZg-W5-4BD"/>
+                            <constraint firstItem="A1f-xd-7ea" firstAttribute="trailing" secondItem="0CP-5C-SFN" secondAttribute="trailing" constant="25" id="HJw-E5-mw1"/>
+                            <constraint firstItem="fPc-sB-gZx" firstAttribute="leading" secondItem="A1f-xd-7ea" secondAttribute="leading" constant="25" id="Jhn-oi-SxR"/>
+                            <constraint firstItem="cce-GW-Ef1" firstAttribute="centerX" secondItem="W8Z-tN-edQ" secondAttribute="centerX" id="MHu-ej-A5l"/>
+                            <constraint firstItem="gwf-to-Yha" firstAttribute="top" secondItem="A1f-xd-7ea" secondAttribute="top" constant="40" id="Q03-YD-xmu"/>
+                            <constraint firstItem="fPc-sB-gZx" firstAttribute="top" secondItem="W8Z-tN-edQ" secondAttribute="top" constant="15" id="RnM-9Q-iVa"/>
+                            <constraint firstItem="cce-GW-Ef1" firstAttribute="leading" secondItem="A1f-xd-7ea" secondAttribute="leading" id="ZNg-en-F4n"/>
+                            <constraint firstItem="gwf-to-Yha" firstAttribute="centerX" secondItem="W8Z-tN-edQ" secondAttribute="centerX" id="aai-H5-de3"/>
+                            <constraint firstItem="cfB-bR-XTW" firstAttribute="top" secondItem="A1f-xd-7ea" secondAttribute="top" constant="15" id="emy-i9-aaF"/>
+                            <constraint firstItem="cce-GW-Ef1" firstAttribute="trailing" secondItem="A1f-xd-7ea" secondAttribute="trailing" id="kJV-Jm-dNR"/>
+                            <constraint firstAttribute="bottom" secondItem="cce-GW-Ef1" secondAttribute="bottom" id="toC-o7-h3S"/>
+                            <constraint firstItem="cce-GW-Ef1" firstAttribute="top" secondItem="cfB-bR-XTW" secondAttribute="bottom" constant="15" id="xM1-AL-cWw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LeaveMozi" destination="cfB-bR-XTW" id="UZs-Db-nrc"/>
+                        <outlet property="postButton" destination="0CP-5C-SFN" id="8ox-2S-fl8"/>
+                        <outlet property="slider" destination="gwf-to-Yha" id="vDt-p9-9Pm"/>
+                        <outlet property="textField" destination="cce-GW-Ef1" id="CvK-1P-rr3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYZ-D5-CJ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292.75362318840581" y="105.80357142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="batu_30" width="20" height="20"/>
+        <image name="send" width="30" height="30"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

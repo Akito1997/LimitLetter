@@ -1,0 +1,6 @@
+framework module Pods_LimitLetter {
+  umbrella header "Pods-LimitLetter-umbrella.h"
+
+  export *
+  module * { export * }
+}
